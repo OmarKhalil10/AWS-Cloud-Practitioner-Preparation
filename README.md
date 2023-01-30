@@ -4,6 +4,6 @@
 
 The Internet: 
 
->How data transfered from browser to server and back?
+<p>How data transfered from browser to server and back?<p>
 Browser--Request-->ISP--Request-->Server---->Webhost--Packet-->Browser 
 
