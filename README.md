@@ -84,5 +84,36 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 - **Hybrid** Deployment.
 
 1. **Cloud Deployment**
-- 100
+- **100%** of IT infrastructure on the cloud.
+- All applications migrated to or created in the cloud.
+- Rmoves **roadblock** of costly and **time-consuming** procurement processes.
+
+2. **On-Premises/Private Cloud Deployment**
+- Use **Virtualization** to deploy resources in their **on-premises** data centers.
+- Often looks like **Traditional** IT infrastructure.
+- Does not provide a lot of benefits of cloud computing.
+- Resources **Cannot** be accessed using the **internet** [this provide a very quick data access].
+- Procide dedicated resources [no resource sharing with other companies].
+- High Security.
+
+3. **Hybrid Deployment**
+- Connect **on-premises** technology with **cloud-based** resources.
+- Great for established companies that are in the process of **migrating** over the cloud.
+- Data **Partially** on the cloud, and **Partially** in the on-premises data centers.
+- Use the **Cloud** as **Backup** and **disaster recovery solution**.
+
+## We choose the best deployment model based on this features
+
+1. **Cloud Deployment**
+- Utilize **Flexibility** and **Affordability** of cloud computing.
+
+2. **On-Premises/Private Cloud Deployment**
+- High Security on-premises.
+- High **Data Retrieval** speed.
+- Virtualization of legacy resources.
+
+3. **Hybrid Deployment**
+- **Partially** on the cloud, and **Partially** in the on-premises data centers.
+
+
 
