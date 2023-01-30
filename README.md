@@ -9,8 +9,8 @@
 
 <h6>AWS Cloud Computing<h6>
 **Features**
-- It is the on-demand delivery of compute, database storage, application, and other IT resources
-- Utilize a pay-as-you-go model [pay only for what you use, when you use them]
+1. It is the on-demand delivery of compute, database storage, application, and other IT resources
+2. Utilize a pay-as-you-go model [pay only for what you use, when you use them]
  
 
   
