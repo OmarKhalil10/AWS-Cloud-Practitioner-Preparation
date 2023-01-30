@@ -8,8 +8,8 @@
 - Browser--Request-->ISP--Request-->Server---->Webhost--Packet-->Browser
 
 ## AWS Cloud Computing
-1. It is the on-demand delivery of compute, database storage, application, and other IT resources
-2. Utilize a pay-as-you-go model [pay only for what you use, when you use them]
+- It is the on-demand delivery of compute, database storage, application, and other IT resources
+- Utilize a pay-as-you-go model [pay only for what you use, when you use them]
  
 
   
