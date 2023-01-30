@@ -44,7 +44,7 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
  - **Scalability** Scale up or down instantaneously and only pay for waht you use.
  - Benefit from **Economy of scale**.
 
-## Man Advantages of Cloud Computing:
+## Main 6 Advantages of Cloud Computing according to [AWS] _IMPORTANT_
 
 1. Trade capital expense for variable expense.
 2. Benefit from massive economies of scale.
@@ -115,5 +115,53 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 3. **Hybrid Deployment**
 - **Partially** on the cloud, and **Partially** in the on-premises data centers.
 
+## Well-Architected Framework
+
+[**Build the most secure, durable, efficient, and high-performing IT infrastructure possible**].
+
+**_BEST PRACTICES_**
+
+1. **Avoid Unnecessary Costs**
+- Use only what you need.
+- Reserve resources in advance.
+- Continue to monitor for optimization.
+
+2. **Reliability**
+- Test disaster recovery settings.
+- Incorporate redundancy.
+- Have duplicate copies of resources.
+
+3. **Efficiency**
+- The **efficient use** of computing **resources** to **adjust** to system **requirements**.
+
+4. **Security** [Information - System - Assests]
+- Best practice should be **automated**.
+- **Data** should be always **protected**.
+- Enable **Traceability**.
+- **Manage access**.
+
+5. **Operational Excellence**
+- Document everything.
+- Refine operational procedures.
+- Anticipate failure.
+- Update processes.
+- Learn from failures.
+
+ 6. **Sustainability**
+ - Maximum performance from available resources.
+ - Minimize required total resources.
+ - Minimize **environmental** impact.
+ - Have **lower footprints** and **more energy efficient** than typical **on-premises environments**
+
+## Amazon Web Services (AWS)
+
+- Provide **IT infrastructure** (IaaS) service to organizations as web services.
+- Resources are accessed using internet.
+- Utilize the **Pay-as-you-go** model to help organizations save money, time and human resources.
+
+# 24 AWS Services by Groups
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 
