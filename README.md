@@ -73,3 +73,16 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 - Easy to use as **End-User**.
 - Less flexibility.
 
+## Complexity level
+1- High [**IaaS**].
+2- Mid [**PaaS**].
+3- Low [**SaaS**].
+
+## Cloud Deployment Models
+- **Cloud** Delployment.
+- **On-Premises** Deployment.
+- **Hybrid** Deployment.
+
+1- **Cloud Deployment**
+- 100
+
