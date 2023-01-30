@@ -159,9 +159,15 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 - Resources are accessed using internet.
 - Utilize the **Pay-as-you-go** model to help organizations save money, time and human resources.
 
-# 24 AWS Services by Groups
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
+## 24 AWS Services by Groups
+| Column 1 (8) | Column 2 (8) | Column 3 (8) |
+| ------------- | ------------- | ------------- |
+| Analytics | Database  | Migration and Transfer  |
+| Application Integration  | Developer Tools | Mobile  |
+| AR and VR  | End-User Computing  | Networking and Content Delivery  |
+| AWS Cost Management  | Game Tech  | Quantum Technologies  |
+| Blockchain  | Internet of Things (IOT)  | Robotics  |
+| Business Applications  | Machine learning  | Satellite  |
+| Compute  | Management and Governance  | Security, Identity and Compliance  |
+| Customer Engagement  | Media Services | Storage  |
 
