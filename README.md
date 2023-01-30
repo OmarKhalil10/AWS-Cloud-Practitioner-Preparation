@@ -47,8 +47,29 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 ## Man Advantages of Cloud Computing:
 
 1. Trade capital expense for variable expense.
-2. sd
+2. Benefit from massive economies of scale.
+3. Stop guessing capacity.
+4. Increase speed and agility.
+5. Stop spending money runnig and maintaining data centers.
+6. Go global in minutes.
 
-
-
+## Three-3 Main Cloud Computing Models
+- SaaS [**Software**].
+- PaaS [**Platform**].
+- IaaS [**Infrastructure**].
   
+**Infrastructure as a Service (IaaS)**
+- Basic building blocks.
+- Most flexibility and management control.
+- Closest to having traditional **on-premises** data center.
+
+**Platform as a Service (PaaS)**
+- Deploy and manage applications without worry. [Ex: Microsoft Azure web hosting - Google App Engine - Heroku].
+- Execute programming languages to host applications.
+- Less flexibility than IaaS, as **packages are _Preconstructed_**.
+
+**Software as a Service (SaaS)**
+- **"Completed Products"** managed by the service provider [Ex: Gmail - Outlook].
+- Easy to use as **End-User**.
+- Less flexibility.
+
