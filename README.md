@@ -160,6 +160,7 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 - Utilize the **Pay-as-you-go** model to help organizations save money, time and human resources.
 
 ## 24 AWS Services by Groups
+<center>
 | Column 1 (8) | Column 2 (8) | Column 3 (8) |
 | ------------- | ------------- | ------------- |
 | Analytics | Database  | Migration and Transfer  |
@@ -170,4 +171,5 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 | Business Applications  | Machine learning  | Satellite  |
 | Compute  | Management and Governance  | Security, Identity and Compliance  |
 | Customer Engagement  | Media Services | Storage  |
+</center>
 
