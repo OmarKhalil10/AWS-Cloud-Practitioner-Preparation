@@ -59,7 +59,7 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 - SaaS [**Software**].
 - PaaS [**Platform**].
 - IaaS [**Infrastructure**].
-  
+
 **Infrastructure as a Service (IaaS)**
 - Basic building blocks.
 - Most flexibility and management control.
@@ -156,7 +156,7 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
  - Have **lower footprints** and **more energy efficient** than typical **on-premises environments**
 
 
-# 3- Introduction to AWS 
+# 3- Introduction to AWS
 
 ## Amazon Web Services (AWS)
 
@@ -191,9 +191,11 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 11. UK Ministry of Justice
 
 ## Questions
-**Why did Amazon originally venture into cloud computing?**
+**Q1. Why did Amazon originally venture into cloud computing?**
 
-*to serve third-party vendors1*
+*to serve third-party vendors*
+
 AWS made life easier for small, external vendors on Amazon.
-## 
+
+##
 
