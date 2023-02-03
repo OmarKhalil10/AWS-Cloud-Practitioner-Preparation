@@ -180,5 +180,19 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 ## Big Companies using AWS
 1. Airbnb
 2. General Electric
+3. Dow Jones
+4. Kellogg's
+5. Atlassian
+6. Netflix
+7. Citrix
+8. Squate Enix
+9. Spotify
+10. USDA
+11. UK Ministry of Justice
 
+## Questions
+**Why did Amazon originally venture into cloud computing?**
+_to serve third-party vendors_
+AWS made life easier for small, external vendors on Amazon.
+## 
 
