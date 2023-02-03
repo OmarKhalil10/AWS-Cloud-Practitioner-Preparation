@@ -1,6 +1,6 @@
-# AWS-Cloud-Practitioner-Preparation
+# Prepare for the AWS Certified Cloud Practitioner (CLF-C01) Certification Exam
 
-# 1- Cloud Concepts
+# 1- Introduction to Cloud Computing
 
 ## The Internet
 
@@ -36,7 +36,9 @@ _hypervising_ Together with connectivity, hypervising is the enabling technology
 **What marks the origin of cloud computing, and when did it occur?**
 _the development of mainframe computing in the 1950s_ Electronic computing begins here, and the idea of having multiple, dumb terminals started the idea of the cloud.
 
- ## Why to choose Cloud Computing for work?
+# 2- Cloud Computing Concepts
+
+## Why to choose Cloud Computing for work?
  - No need for physical servers on cabling.
  - No need for server room setup or maintenance.
  - No hardware replacement or procurements.
@@ -153,6 +155,9 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
  - Minimize **environmental** impact.
  - Have **lower footprints** and **more energy efficient** than typical **on-premises environments**
 
+
+# 3- Introduction to AWS 
+
 ## Amazon Web Services (AWS)
 
 - Provide **IT infrastructure** (IaaS) service to organizations as web services.
@@ -171,5 +176,9 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 | Business Applications  | Machine learning  | Satellite  |
 | Compute  | Management and Governance  | Security, Identity and Compliance  |
 | Customer Engagement  | Media Services | Storage  |
+
+## Big Companies using AWS
+1. Airbnb
+2. General Electric
 
 
