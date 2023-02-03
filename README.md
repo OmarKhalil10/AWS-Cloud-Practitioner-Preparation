@@ -192,7 +192,8 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 
 ## Questions
 **Why did Amazon originally venture into cloud computing?**
-_to serve third-party vendors_
+
+*to serve third-party vendors1*
 AWS made life easier for small, external vendors on Amazon.
 ## 
 
