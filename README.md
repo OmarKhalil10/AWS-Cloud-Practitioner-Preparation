@@ -195,7 +195,26 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 
 *to serve third-party vendors*
 
-AWS made life easier for small, external vendors on Amazon.
+> AWS made life easier for small, external vendors on Amazon.
 
-##
+**Why do many large organizations use cloud computing?**
+
+> for scalability, rapid deployment, and efficiency
+
+# 4- Diving into AWS
+
+## popular services offered in aws
+
+1. **Compute Service**
+
+- Provide **virtual server hosting**, **Container Management**, and **Serverless Computing**.
+
+- Instead of hosting servers themselves, organizations can **"RENT"** server compute space and capacities for cheap from AWS.
+
+- No longer have to **prochase** physical server or **maintain** data centers **on-premises**.
+
+
+
+
+
 
