@@ -38,6 +38,12 @@ You/Customer | AWS |
 :---------:|:----------:|
 Security **in** the Cloud      | Security **of** the Cloud   |
 
+[Shared_Responsibility_Model](Images\2- Security\Shared_Responsibility_Model.jpg)
+
+## Shared Responsibility by Service Type
+
+[Shared-Responsibility-by-Service-Type](Images\2- Security\Shared-Responsibility-by-Service-Type.png)
+
 ## AWS: Security of the Cloud
 
 <br>
