@@ -30,11 +30,14 @@ Made up of copper wires and global network of billions of devices.
 
 ## Questions
 **Which technology provides oversight for the cloud?**
-**Answer**
+
 _hypervising_ Together with connectivity, hypervising is the enabling technology.
 
 **What marks the origin of cloud computing, and when did it occur?**
-_the development of mainframe computing in the 1950s_ Electronic computing begins here, and the idea of having multiple, dumb terminals started the idea of the cloud.
+
+_the development of mainframe computing in the 1950s_
+
+Electronic computing begins here, and the idea of having multiple, dumb terminals started the idea of the cloud.
 
 # 2- Cloud Computing Concepts
 
@@ -81,8 +84,8 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 3. Low [**SaaS**].
 
 ## Cloud Deployment Models
-- **Cloud** Delployment.
-- **On-Premises** Deployment.
+- **Public** Cloud Delployment.
+- **On-Premises / Private** Deployment.
 - **Hybrid** Deployment.
 
 1. **Cloud Deployment**
@@ -213,8 +216,111 @@ _the development of mainframe computing in the 1950s_ Electronic computing begin
 
 - No longer have to **prochase** physical server or **maintain** data centers **on-premises**.
 
+2. **Storage Services**
 
+- Provide storage for both **in-use** and **archival** files.
 
+**Examples**
+> * (Elstic File System - **EFS**) to create shared folders in the cloud.
+> * (simple storage - **S3**) to upload files like images, text, etc.
+> * (**S3 Glacier**) to archive file and store large amount of data for cheap.
+> * (**Storage Gateway**) to take daily **backups** of your company's on-premises data.
 
+- Different **Cost** associated with **Frequency** and **Durability** of data access.
 
+- Storage type for almost every level of need with ver granilar costs mmet budget requirements.
 
+3. **Database Services**
+
+- **Fully Managed** _Relational_ and _NoSQL_ databases.
+
+**Examples**
+
+> * (**RDS**) is the most **Cost-Efficient** database.
+> * (**DynamoDB**)is a **Relational** and **highly scalable** _NoSQL_ database.
+
+- Also offers **Fully Managed** Data **Warehouse** service.
+
+**Examples**
+> * (**Redshift**)
+
+- Highly **scalable** and **cost-efficient**: crunch data at fraction of cost of on-ste database servers.
+
+**Examples**
+> * (**ElastiCache**) it chaches necessary data on the cloud.
+
+# Practical Part!
+
+## Create an AWS account
+
+1. go to aws
+2. create a personal account.
+3. add your visa card number and confirm the security check.
+4. confirm with message sent to your phone for verfication.
+5. personalize your experience.
+6. check your account and login.
+
+## Exploring the AWS dashboard
+
+> No limits - No Instructions :)
+
+## Use case: AWS Free Tier
+
+**Build A Personal Bolg Using AWS**
+
+Service A | Service B |
+:---------:|:----------:|
+ Route 53      | EC2 AMI |
+ Domain registration     | WordPress |
+ Ex: **myblog.com**     | template on a virtual server |
+
+## Questions
+
+1. How can you find general documentation and help on the AWS dashboard?
+
+> **from the Support drop-down menu**,
+> You can find detailed documentation and create help tickets.
+
+2. How should you use AWS Free Tier?
+
+> **as a way to explore**, The service provides an introduction to AWS, and lets you try various capabilities.
+
+3. How can you make the URL for your weblog simpler than the long AWS string?
+
+> _by using the paid AWS domain registrar_, **This service is called Route 53.**
+
+4. Your team has some extensive calculations to conduct for an engineering design. Which type of service would be most helpful?
+
+> **Compute**, Compute services are core to many scientific and engineering operations.
+
+5. What information is necessary for AWS account creation?
+
+> **telephone number** and **credit card credentials**, The telephone number can be mobile or other.
+
+## Conclusion
+
+Topics to Review |
+:---------:|
+ What is AWS? |
+ What are the six (6) advantages of Cloud Computing?|
+ What are the three (3) Cloud Computing Models? [ **SIP** ]|
+ What are the three (3) Cloud Computing Deployments? [ **PHO** ]|
+ What are the Five (5) pillars of a Well-Architected Framework?|
+
+* For the 3 **Cloud Models** and 3 **Cloud Deployments** remember this word [ **SIP PHO** ]
+> Silly Memorizing Method
+>
+> SIP PHO
+>
+> SaaS, IaaS, Pass
+>
+> Public, Hybrid, On-Premises / Private
+
+* For the **SIX 6** "_Pillars_" of a **Well-Architected Framework** remember this word [ **CROPSS** ]
+
+1. [ **C** ] --> **C**ost Optimization.
+2. [ **R** ] --> **R**eliability.
+3. [ **O** ] --> **O**perational Excellence.
+4. [ **P** ] --> **P**erformance Efficiency.
+5. [ **S** ] --> **S**ecurity.
+6. [ **S** ] --> **S**ustainability.
