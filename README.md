@@ -40,5 +40,13 @@
 
 - Makes up **33%** of the exam (largest portion).
 - Four parts
-1.
+1. Define methods of deploying and operating in the AWS Cloud.
+2. Define the AWS global infrastructure.
+3. Identify the core AWS services.
+4. Identify resources for technology support.
+
+### You can find all AWS Cloud products here
+
+[AWS Products](https://aws.amazon.com/products)
+
 ## 4- Billing and Pricing Domain
