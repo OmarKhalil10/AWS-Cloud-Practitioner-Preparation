@@ -146,7 +146,6 @@ Image saved in **S3 bucket**  | **Email** being **sent** from one **server** to 
 You/Customer | AWS |
 :---------:|:----------:|
 Security **in** the Cloud      | Security **of** the Cloud   |
-|
 
 2. Security **Pillar** of the Well-Architected Framework.
 
@@ -200,7 +199,7 @@ Security **in** the Cloud      | Security **of** the Cloud   |
 
 # 2- Security Services
 
-1. Identity and Access Management (**IAM**).
+## 1- Identity and Access Management (**IAM**).
 
 List of Imprortant Things about IAM|
 :------:|
@@ -209,7 +208,7 @@ Manage **Users** and **Groups**|
 Can provide access to **users** or other **AWS service**|
 **Permissions** are **global**: any access setting will be true across all regions|
 Follow principle of Least Privilege|
-|
+
 
 ## With IAM You have **3** **methods** of **Management**
 
@@ -245,3 +244,196 @@ for lists.
 4. Flexible **security credential management**.
 5. Federated access.
 6. **Seamless integration** across various AWS service.
+
+## 2- Web Application Firewall (WAF)
+
+- Protect web apps runnig on the AWS Cloud from common web exploits.
+- Firewall service for web applications.
+- Protect web apps against exploits that could compromise **security** or **availability**.
+- Protect apps from exploits that could force your app to **consume excessive resources** (More Cost).
+
+### Advantages of (WAF)
+
+1. Improve web **traffic visibility**.
+2. Provide **cost-effective** web app protection.
+3. **Increased security** and protection against **web attacks**.
+4. Easy to **deploy** and **maintain**.
+
+## 3- AWS Shield (DDoS Protection).
+
+> **What is DDoS Attack?**
+>
+> - An attempt to make a machine or network resource **unavailable**.
+> - Most often my making **excessive repeated requests** to the website **using thousands of unique IP addresses**.
+
+### Advantages of AWS Shield
+
+- Provides **detection** and **automatic mitigations**.
+- **Minimizes effects** of DDoS attack to your apps.
+- Helps **Minimize** application **Down time and Latency** when an attack happens.
+
+### Tires of AWS Shield
+
+Standard Tier | Advanced Tier |
+:---------:|:----------:|
+ Automatically Enabled     |Continuous, **24/7** access to AWS DDoS response team |
+ **Free**      | Near **real-time** visibility into **events** |
+ Protects web apps against a **majority** of common DDoS attacks      | Integrates with **AWS WAF** |
+ Get comprehensive availability protection against **all known infrastructure attacks** when used with **CloudFront** and **Route 53**   | Provides **high-level** protections, **network and transport layer** protections, and **automated** application traffic **monitoring** |
+
+ ### Advantages of AWS Shield: **Advanced**
+
+ - Financial protection against DDoS-related spikes in charges for **EC2**, **Elastic Load Balancers**, **CloudFront**, and **Route 53**.
+
+ - Available **globally** on all **CloudFront** and **Route 53** Edge locations.
+
+ - Your web application can be hosted **anywhere** in the world and still be **protected** by **AWS Shield**.
+
+
+## 4- Amazon Inspector
+
+> Inspects your applications to find security issues and bring them to your attention.
+
+- **Automated** security assessment service for applications.
+- **Automatically** assess for **exposure**, **vulnerability**, and **derivations** from best practices.
+- **Generate** detailed **Reports** to help check for **vulnerabilities**.
+- Security teams can **get reports** validating that **tests** were performed.
+
+### Advantages of Amazon Inspector
+
+- **Reduce risk** of introducing security **issues** during **deployment** and **development**.
+- You can **define standards** and best practices.
+- or you can use the **AWS constantly updated standard**.
+
+## 5- AWS Trusted Advisor
+
+> Makes sure AWS Cloud resources are aligned with **best practices** and **provide** customized **recommendations**.
+>
+> Secure your cloud **IT Infrastructure**.
+
+- **Guides** provisioning of resources to follow **AWS best practices**.
+
+- **Scans** your infrastructure and advises you on **how it is or it is not following AWS best practices**.
+
+- Based of **FIVE** categories:
+
+**5** categories |
+:--------:
+ Cost Optimization |
+ Performance |
+ Security |
+ Fault Tolerance |
+ Service Limit |
+
+- Provides action **recommendations** to **meet best practices**.
+
+### Seven (**7**) Core Trusted Advisor **Checks**
+
+1. **S3** bucket permissions.
+2. **Security groups** _ specific ports unrestricted.
+3. **IAM** use.
+4. **MFA** on **root** account.
+5. **EBS** public **Snapshots**.
+6. **RDS** public **Snapshots**.
+7. Service **Limits**.
+
+### **Additionally**
+
+- **More** types of **checks** on **top** of **Core Checks**.
+- **Notifications** through weekly updates.
+- Set up **automated actions** in responce to akerts **using** **CloudWatch**.
+- **Programmatic** access to scan results via **AWS Support API**.
+
+## 6- Amazon GuardDuty
+
+> Continuous, **24/7** _threat detection_ service.
+>
+> Amazon **GuardDuty** continuously monitors your **AWS Cloud Infrastructure**, Intelligently **detects threats** using **Machine Learning**, and **Helps** you to **Take Action** immediately if a threat is found.
+
+- Provides **24/7** _threat detection_ service for the AWS Cloud.
+- **Monitors** for **malicious** activity and **unauthorized** behavior.
+- **Analyzes** events to send actionable **alerts** via **CloudWatch**.
+
+### Note
+> Amazon **GuardDuty** used **Machine Learning [ Anomaly Detection ]**, and **Integrated Threat Intelligence** to identify potential threats.
+>
+> **Easy** to deploy.
+
+## Questions
+
+1. **How does AWS GuardDuty deal with threats?**
+
+> It constantly monitors activity and deploys machine learning techniques for analysis.
+AWS GuardDuty is **continuously active**.
+
+2. **What does AWS Inspector examine?**
+
+> **application security**
+>
+> If you develop your own application, AWS Inspector can help you find any security flaws.
+
+3. **What action does AWS Trusted Advisor take upon implementation?**
+
+> It looks at your setup and suggests changes to meet best practices.
+>
+> Security is just one issue that Trusted Advisor examines.
+
+4. **Why would you employ federated users?**
+
+> **to integrate with external operations and across AWS systems**
+>
+> For example, you might integrate Microsoft Active Directory with AWS IAM.
+
+5. **What is the purpose of a WAF?**
+
+> **to protect applications from malicious activity**
+>
+> A WAF, or web application firewall, protects your applications from web exploits.
+
+6. **Why would you need the advanced instead of the standard AWS Shield?**
+
+> to get real-time tools for balancing loads
+>
+> The advanced AWS Shield provides more dynamic responses and financial protection.
+
+## Review the Security and Compliance Domain
+
+1. Shared responsibility model.
+2. Security pillar of the Well-Architected Framework.
+3. Principle of least privilege.
+4. Security Services.
+
+## 1- Shared responsibility model
+
+> Security of Cloud Computing infrastructure and data is a **Shared responsibility** between the **Customer** and **AWS**.
+
+
+You/Customer | AWS |
+:---------:|:----------:|
+Security **in** the Cloud | Security **of** the Cloud |
+
+
+## 2- Security pillar of the Well-Architected Framework
+
+### It has **5** main parts
+
+1. Identity and Access Management (**IAM**).
+2. Detective Controls
+3. Infrastructure Protection.
+4. Data Protection.
+5. Incident Response.
+
+## 3- Principle of least privilege
+
+> Provide the **Least amount of access** necessary to any entity; **No More, No Less**.
+
+## 4- Security Services
+
+### AWS Security Services
+
+1. IAM
+2. WAF
+3. Shild
+4. Inspector
+5. Trusted Advisor
+6. GuardDuty
