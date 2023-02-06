@@ -35,3 +35,10 @@
 - Define the AWS Cloud security and compliance concepts.
 - Identify the AWS access management capabilities.
 - Identify resources for recieving security-related support.
+
+## 3- Core Services (Technology) Domain
+
+- Makes up **33%** of the exam (largest portion).
+- Four parts
+1.
+## 4- Billing and Pricing Domain
