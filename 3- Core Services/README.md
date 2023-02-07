@@ -450,7 +450,17 @@ Basic Functions|
 
 ## Questions
 
+1. **What components of an Amazon Virtual Private Cloud (VPC) replicate the components you have in your home internet service?**
 
+> **internet gateway, route table, and network access control list**
+>
+> These replace your modem, router, and firewall, respectively.
+
+2. **How do the Edge Locations in CloudFront provide a benefit for users?**
+
+> **Users can access cached data from a nearby edge location more rapidly than going all the way back to the origin server.**
+>
+> This is similar to a grocery store, where a consumer can buy vegetables there instead of going to a distant farm.
 
 # 5- Management Tools
 
@@ -458,10 +468,174 @@ Basic Functions|
 2. CloudTrail
 3. CloudWatch
 
-## 1- CloudFormation
+## 1- CloudFormation (Templates) and (IAC)
+
+### How it works
+
+> AWS CloudFormation lets you model, provision, and manage AWS and third-party resources by treating infrastructure as code.
+
+![CloudFormation](/Images/3-%20Core%20Services/CloudFormation.png)
+- **Templates**: recipes for resource deployment in AWS.
+- **Provision** and **deploy** fully **configured** infrastructure.
+- **Free** to use.
+- Pay only for r**esources used in the templates** like **EC2** or **S3**.
+- Provision multi-region, multi-tier application quickly with text file written in (**JSON** or **YAML**).
+- **Update** or **manage** the templates (**Stacks**) using AWS Management **Console**, Command Line Interface (**CLI**) or Software Development Kit (**SDK**).
+- **Version Control** is always **available** so you can **revert** back to your previous **setting** whenever you want.
+
+> AWS CloudFormation brings to life what is known as Infrastructure as Code (**IAC**).
+>
+> It help us to **Deploy** IT **Infrastructure** **based** on **text** file that **specifies** resources and configuration for each service being deployed.
+
 ## 2- CloudTrail
+
+### How it works
+
+> AWS CloudTrail monitors and records account activity across your AWS infrastructure, giving you control over storage, analysis, and remediation actions.
+
+![CloudTrail](/Images/3-%20Core%20Services/CloudTrail.png)
+
+- **Monitor** and **Auditing** of IT infrastructure for **compliance**, user **activity**/API usage **tracking**, and risk auditing.
+
+- **Log** and **Monitor** account **activities** and **event history**.
+
+- Simplify **compliance audits**.
+
+- **Discover** and **Troubleshoot** security and operational **issues**.
+
+- Provide **visibility** into user/resource **activities**.
+
+- **Automatically** **respond** to security **threats**.
+
+- **Track** **actions** taken **through** AWS Management **Console**, Command Line Interface (**CLI**) and Software Development Kits (**SDKs**).
+
+- **Review Logs** using CloudTrail event **history**.
+
+- **Deliver reports** to **S3** buckets or **CloudWatch logs and events**.
+
+- **Free review** of **account activities** for the past **90 Days** (**3 Months**).
+
+- Can be set up to **deliver** copy of **management events** in **each region** to **S3**.
+
+- **Logging** of **data events** has **small fees**.
+
+### Use Cases
+
+Case | Description |
+:---------|:----------|
+ **Audit activity** | Monitor, store, and validate activity events for authenticity. Easily generate audit reports required by internal policies and external regulations. |
+ **Identify security incidents** | Detect unauthorized access using the Who, What, and When information in CloudTrail Events. Respond with rules-based EventBridge alerts and automated workflows. |
+ **Troubleshoot operational issues** | Continuously monitor API usage history using machine learning (ML) models to spot unusual activity in your AWS accounts, and determine root cause. |
+
 ## 3- CloudWatch
+
+### How it works
+
+> Amazon CloudWatch collects and visualizes real-time logs, metrics, and event data in automated dashboards to streamline your infrastructure and application maintenance.
+
+![CloudWatch](/Images/3-%20Core%20Services/CloudWatch.png)
+
+- **Monitoring** and **Management** system for AWS infrastructure.
+
+- **Natively integrated** with over **70 AWS** services.
+
+- Gain **System-wide visibility** into **resource utilization**, **application performance**, and **operational health**.
+
+- Get **notifications** in **real-time** on **data**, **metrics**, and **events**.
+
+- It is (**Pay-as-you-go**) service.
+
+### Use Cases
+
+Case | Description |
+:---------|:----------|
+ **Monitor application performance** | Visualize performance data, create alarms, and correlate data to understand and resolve the root cause of performance issues in your AWS resources. |
+ **Perform root cause analysis** | Analyze metrics, logs, logs analytics, and user requests to speed up debugging and reduce overall mean time to resolution. |
+ **Optimize resources proactively** | Automate resource planning and lower costs by setting actions to occur when thresholds are met based on your specifications or machine learning models. |
+ **Test website impacts** | Find out exactly when your website is impacted and for how long by viewing screenshots, logs, and web requests at any point in time. |
+
+## Difference between Cloud Watch and Cloud Trail
+
+**CloudTrail** | **CloudWatch** |
+:-------:|:--------:|
+ Audits Logs | Monitors |
+ _ | Can react to events |
+ Ex: If you need access logs because someone did something they souldn't have | Ex: If you need to know how much **CPU**, on **EC2 instance is using** |
 
 ## Questions
 
+1. **Rosa likes the services available with CloudWatch, but sometimes the notifications occur so often that responding to problems keeps her from other work. What can she do?**
+
+> **Set up alarms to automatically make predefined changes to fix common issues.**
+>
+> Rosa will set triggers so CloudWatch will fix common problems without her having to take action.
+
+2. **What is the basic building block of CloudFormation?**
+
+> **templates used for resource deployment**
+>
+> These templates can be run over repeatedly in order to provision and deploy fully configured infrastructure.
+
+3. **What is one way CloudTrail is used?**
+
+> **to log and monitor account activities and event history**
+>
+> It can also be used for compliance auditing, and to discover and troubleshoot security and operational issues.
+
 ## Conclusion
+
+## Reviewing the Technology domain
+
+Services | Concepts |
+:-------:|:--------:|
+ Compute | Infrastructure As Code (**IAC**) |
+ Storage | Deploying on the AWS Cloud |
+ Database | Availability Zones (**AZs**) and Regions |
+ Network and Content Delivery | |
+ Management Tools | |
+
+## Two words rule for each service
+
+## Compute
+
+Services | Key |
+:-------:|:--------:|
+ Amazon **EC2** | Virtual server |
+ AWS **Elastic Beanstalk** | Automatically **Grows** your **Application** (like Jack's beanstalk) |
+ Elastic **Load Balancing** | **Balances** incoming traffic **Loads**  |
+ AWS **Lambda**| Run **serverless** code (Lambda **Function**) |
+ AWS **Lightsail** | **Preconfigured Virtual Server** |
+
+## Storage
+
+ Services | Key |
+:-------:|:--------:|
+ Amazon **S3** | **Object** Storage (**Files**) |
+ Amazon **EBS**| **Block** Storage (External Hard Drive) |
+ AWS **Snowball**| Transfer huge amounts of data (**Physical Device**) |
+ AWS **Storage Gateway** | Gateways to connect **on-premises** to resources uploaded **on the cloud** (**Hybrid** Solution) |
+
+## Database
+
+ Services | Key |
+:-------:|:--------:|
+ Amazon **DynamoDB** | **NoSQL** (**non-relational**) database |
+ Amazon **RDS** | Relational database that supports six types of database engines |
+ Amazon **Aurora** | **Relational database** running on Amazon **RDS** (**Higher speed** and performance with **Low cost**) |
+ Amazon Redshift | **Data warehouse** for **A LOT** of data |
+
+ ## Network and Content Delivery
+
+ Services | Key |
+:-------:|:--------:|
+ Amazon **VPC** | Private Vitual Network (**Your Corner** of the AWS **Cloud**) |
+ Amazon **CloudFront** | **Caches content** to **Edge Locations** to load **FASTER** (**CDN**) |
+ Amazon **Route 53** | **Routes domains** to **services** and **IP** addresses (**DNS**) |
+
+## Management Tools
+
+ Services | Key |
+:-------:|:--------:|
+ Amazon **CloudFormation** | From **Resources** and **Cloud Services** with **TEMPLATES** |
+ Amazon **CloudTrail** | Tracks "**Trails**" of action (**Audit Logs**) |
+ Amazon **CloudWatch** | **Watches (Monitor)** for issues and can automatically **act** on **Triggers** |
