@@ -393,10 +393,64 @@ Types | Description |
 3. Route 53
 
 ## 1- VPC
-## 2- CloudFront
-## 3- Route 53
+
+> It helps you to decide what comes in, what goes out, and what lives inside.
+
+![VPC](/Images/3-%20Core%20Services/VPC.png)
+
+- **Logically isolated section** in the cloud to provision resources.
+
+- Flexible and Secure, allowing you to **control** almost every aspect of your **virtual network**.
+
+- VPC automatically provisioned at AWS account signup with (**subnets**, **IP ranges**, **route tables** and **security groups**).
+
+## 2- CloudFront: Content Delivery Network (CDN)
+
+> Faster, Faster and Faster!
+
+- It is a **Global** Content delivery Network (**CDN**).
+- Integrates with many AWS services to provide optimal performance and security.
+- Makes loading websites/apps for end users faster using **edge locations** to cache files and resources.
+- It delivers content to user based on **2 factors**:
+1. Location of the user.
+2. Location of the Content Delivery Server.
+
+![CloudFront Example](/Images/3-%20Core%20Services/cloudfront-functions-where.png)
+
+### AWS CloudFront Advantages
+- Scalable
+- No minimum commitment or fixed term contract.
+- Only pay for content delivered using the service (**Pay-as-you-go**).
+
+## 3- Route 53: Domain Name System (**DNS**)
+
+<br>
+
+> Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to internet applications running on AWS or on-premises.
+
+![Amazon Route 53](/Images/3-%20Core%20Services/product-page-diagram_Amazon-Route-53_HIW%402x.4c2af00405a0825f83fca113352b480b19d9210e.png)
+
+- High **scalable** cloud Domain Name System (**DNS**).
+- **Reliably and cost-effectively** rpute end users to your internet applications.
+- **Connect user requests** to **infrastructure** running on **AWS** like **EC2 instance** or **S3 bucket**.
+- Route users to infrastructure outside of AWS as DNS Service.
+- Integrates with other AWS services like EC2 or S3.
+- **Simple** to setup, **fast**, **secure** and **cost-effective**.
+- You're charged only for what you use (**Pay-as-you-go**), without any upfront fees or minimum usage commitments.
+- Automatically **scales** to handle **large query volumes**.
+
+### Route 53 Basic Functions
+
+Basic Functions|
+:-------:|
+ Domain Registration |
+ Domain Name System (**DNS**) |
+ Health check of web apps accessibility |
+ Auto Naming for service discovery |
 
 ## Questions
+
+
 
 # 5- Management Tools
 
