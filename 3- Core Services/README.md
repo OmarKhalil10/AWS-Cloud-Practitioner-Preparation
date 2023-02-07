@@ -326,12 +326,65 @@ Types | Description |
 
 ## 1- DynamoDB
 
+- Secure, Scalable (Automatically), fast, and **flexible**, **NoSQL database**.
+- Virtually unlimited **throughput** and **storage**.
+- **Serverless**: _NO NEED_ to **provision**, **manage**, or **update** your own servers.
+- **pay for specific workload** or **pay-as-you-go**.
+
 
 ## 2- Relational Database Service (**RDS**)
-## 3- Aurora
+
+- Relational Database.
+- Only pay for what you use (Pay-as-you-go) or reserve at on-demand pricing (Cheaper).
+- AWS takes care of **provisioning**, **monitoring**, and **maintaining** the database.
+- Compatible with **Amazon Aurora**, **PostgreSQL**, **MySQL**, **MariaSQL**, **Oracle Database**, **Microsoft SQL Server**.
+- Existing database can be migrated using **AWS Database Migration Service**.
+
+## 3- Aurora (One of The Six Available **Relational Database** Engines)
+
+- One of the six available **Relational Databases** supported by Amazon **RDS**.
+- Fully managed by **RDS**; No **administration** or **provisioning** necessary so you can only focus on coding.
+- Monitor performance through **AWS Monitoring and Alerting Services**.
+- MySQL and PostgreSQL **compatible**, but **5 times faster** than Standard **MySQL** and **3 times faster** than **PostgreSQL** and also **Cheaper**.
+- Databases up to **64 TP** per instance.
+- Hosted on **distributed**, **fault-tolerant**, **self-healing** storage systems with **low latency**.
+- Can **migrate** existing MySQL or PostgreSQL **databases** using **AWS Database Migration Service**.
+
 ## 4- Redshift
+- Fully managed, **petabyte-scale** data **warehouse** servive.
+- Super fast, Super cheap.
+- You pay for what you use (**Pay-as-you-go**).
+- Fully integrated with your data lakes.
+- Deploy new data warehouse in **minutes**.
+- Secure.
+- Data encryption compliant with many common requirements like **HIPAA**.
 
 ## Questions
+
+1. **What advantage does Amazon Aurora provide when it comes to creating relational databases?**
+
+
+> **It is five times faster than MySQL.**
+>
+> Not only is Aurora faster, but it is also less expensive than using MySQL.
+
+2. **Erie Insurance needs a large data warehouse that is compliant with the Health Insurance Portability and Accountability Act (HIPAA). What AWS service would the company use?**
+
+> **Redshift**
+>
+> Redshift is a petabyte-scale data warehouse service using encryption that is fully compatible with legal requirements such as HIPAA data.
+
+3. **ABC Corp's new app results in far more being sent back and forth than its database solution can handle. How can DynamoDB help ABC Corp?**
+
+> **by providing a secure, scalable, and flexible noSQL database**
+>
+> DynamoDB adapts to needs in order to keep speed and stability high, regardless of how large or small the need is.
+
+4. **How is the Amazon Relational Database Service (RDS) especially useful for an experienced database user?**
+
+> **Database engines, such as MySQL and Microsoft SQL Server, can be used.**
+>
+> This lets an experienced user dive right into creating a database.
 
 # 4- Network and Content Delivery
 
