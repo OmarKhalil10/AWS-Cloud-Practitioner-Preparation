@@ -159,15 +159,95 @@ Well-Architected| Protect against **Downtimes** caused by **natural disasters** 
 
 # 2- Storage
 
-1. S3
+1. S3 (**Simple Storage Service**)
 2. Elastic Block Store (**EBS**)
 3. Snowball
 4. Storage Gateway
 
-## 1- S3
+## 1- S3 (**Simple Storage Service**)
+
+- **Object storage service**: storing each file as **separate entity** (_Object_).
+- High **Availability**, **Security**, and **performance**.
+- Scalable.
+- Charged only for (what you use) - **Pay-as-you-go**.
+- 99.999999999% **Durable**. (which means there is almost no chance of the data become **corrupted**).
+- Upload files (objects) of all sizes (**0 byte ~ 5 terabytes**).
+- Variety of uses: Use uploaded files for **websites**, **mobile apps**, **backup** and **archiving**, **enterprise application**, **IOT** devices, **big data analytics**.
+- **Easy-to-use** management features to **fine-tune** access control.
+
+### S3 Storage Classes
+
+1. Standard
+2. Intelligent-Tiering
+3. Standard-Infrequent Access
+4. One Zone-infrequent Access
+5. Glacier
+6. Glacier Deep Archive
+
+> You can **setup S3 lifecycle policies** which will **automatically** **transfer** files form one storage class **to cheaper one** after certain number of days.
+
 ## 2- Elastic Block Store (**EBS**)
+
+- Raw, unformatted block device attached to an EC2 instance.
+- Can add multiple EBS volumes to one EC2 instance.
+- Use as **file system** or **hard drive**.
+- Dynamically change **configurations** to attached volumes via **Management Console**.
+- Automatically **replicated** within it's **availability zone**.
+- It's high available and durable.
+- Different types of EBS storage for your needs and budgets.
+- Presistent block storage volumes: **do not disappear** when EC2 instances are rebooted.
+- Can be encrypted.
+- Exist independently of EC2 instances so can be moved to other instances.
+
+> You can think of EBS volumes as **external hard drives for your virtual servers**.
+
 ## 3- Snowball
-## 4- Storage Gateway
+
+- Data migration tool.
+- **Hardware Solution**: AWS will physically ship you a **Snowball** to move your data onto and ship back.
+- You can move **50 terabytes** with a **regular Snowball** up to **100 petabytes** with a **Snowmobile** (45-foot-long shipping container).
+
+> **Usage Fee**
+>
+> Free for **10 days** of onsite usage; extra usage fees for every extra day you keep it.
+>
+> Storage fee: free for date trasnsferred to S3 (but you will pay after data transfer for data storage in S3).
+>
+> Snowmobile: **Expensive!**.
+>
+> Service fee per job starting at **$200** for **50 terabytes** of data to **$320** for **80 terabytes** of data.
+
+## 4- Storage Gateway (Hybrid Storage Solution)
+
+<br>
+
+> It connects you **on-premises** storage with **AWS Cloud Storage**, providing a **Hybrid Storage Solution**.
+
+### Common challenges between on-premises environments and the AWS Cloud
+
+<br>
+
+![Common challenges between on-premises environments and the AWS Cloud](/Images/3-%20Core%20Services/common-challenges-between-on-premises-environments-and-the-AWS-Cloud.png)
+
+### High-level architecture of Storage Gateway
+
+<br>
+
+![High-level architecture of Storage Gateway](/Images/3-%20Core%20Services/High-level-architecture-of-storage-gateway.png)
+
+
+### Three common use cases of Storage Gateway, which can be deployed across various stages of the cloud adoption journey
+
+<br>
+
+![Common use cases of Storage Gateway](/Images/3-%20Core%20Services/aws-storage-gateway-hybrid-cloud-storage-use-cases-blog-1024x489.png)
+
+
+### Storage Gateway is made up of three gateway types
+
+<br>
+
+![Three gateway types](/Images/3-%20Core%20Services/SGW-family.png)
 
 ## Questions
 
