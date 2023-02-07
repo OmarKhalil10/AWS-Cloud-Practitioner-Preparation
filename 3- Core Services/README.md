@@ -249,7 +249,73 @@ Well-Architected| Protect against **Downtimes** caused by **natural disasters** 
 
 ![Three gateway types](/Images/3-%20Core%20Services/SGW-family.png)
 
+
+## AWS Storage Gateway: 1- File Gateway
+
+- **Asynchronously** updates objects to S3 as local files are updated.
+- Local **Cache** to provide **low-latency** access to recently accessed files.
+
+## AWS Storage Gateway: 2- Volume Gateway
+
+- Upload files in **blocks** (like virual hard drives).
+- Asynchronously **backed up** as **Point-in-time** snapshots and stored as **EBS** Snapshot (Elastic Block Store Snapshot).
+
+### Types of **Volume Gateway**
+
+> We have 2 types of Volume Gateway
+
+Types | Description |
+:-------:|:-------:|
+**Stored Volume** | Complete copy **on-premises**; sends snapshots to AWS |
+**Cached Volume**| Keeps most **recently accessed data** on-premises; **complete copy on AWS** |
+
+## AWS Storage Gateway: 3- Tape Gateway
+
+- Uses **existing tape-based backup infrastructure** to back up to **virtual tapes** on **S3**.
+
+- Data **stored locally** then **asynchronously** uploaded to **S3**.
+
+- Data can be **archived** using Amazon **Glacier**.
+
+## AWS Storage Gateway Pricing
+
+- You will pay for storage and to access the stored data.
+
+- The quicker you can access the data, the more expensive the solution is.
+
+### Example
+
+- Data stored via **tape gateway** is much **Cheaper** saved to **S3 Glacier Deep Archive** than **S3 Glacier**.
+
+**Why?**
+
+> Because data retrieval take loger time.
+
 ## Questions
+
+1. **Which AWS Storage Gateway functions like virtual hard drives that upload files in blocks?**
+
+> **Volume Gateway**
+>
+> Files are uploaded as blocks, not as individual files.
+
+2. **What does it mean that Amazon Simple Storage Service (S3) is scalable?**
+
+> **It provides the ability to scale your usage up or down and only pay for what you use.**
+>
+> Scalability is one of the ways to keep your costs down with AWS.
+
+3. **What allows Elastic Block Stores (EBS) to be moved between E2 instances?**
+
+> **They exist independently of virtual servers.**
+>
+> In this way, they can be thought of as virtual external hard drives that can be moved from device to device.
+
+4. **IT manager Carlos receives approval to upload all his company's backup data to the AWS cloud. There are 35 terabytes of data. How should he perform the upload?**
+
+> **Use the AWS Snowball.**
+>
+> Carlos uploads the data to the hardware "Snowball" that AWS mails to him, he mails it back, and then AWS uploads the hardware data to S3.
 
 # 3- Database
 
@@ -259,6 +325,8 @@ Well-Architected| Protect against **Downtimes** caused by **natural disasters** 
 4. Redshift
 
 ## 1- DynamoDB
+
+
 ## 2- Relational Database Service (**RDS**)
 ## 3- Aurora
 ## 4- Redshift
