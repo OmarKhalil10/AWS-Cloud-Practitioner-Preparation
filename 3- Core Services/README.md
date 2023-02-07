@@ -639,3 +639,34 @@ Services | Key |
  Amazon **CloudFormation** | From **Resources** and **Cloud Services** with **TEMPLATES** |
  Amazon **CloudTrail** | Tracks "**Trails**" of action (**Audit Logs**) |
  Amazon **CloudWatch** | **Watches (Monitor)** for issues and can automatically **act** on **Triggers** |
+
+## Infrastructure As Code (**IAC**)
+
+> Write code to describe configurations to AWS Cloud Services and AWS Deploys the resources for you.
+
+## Services That Utilizes IAC
+
+1. AWS Elastic Beanstalk.
+2. AWS Lambda.
+3. AWS CloudFormation
+
+## Deploying to the AWS Cloud
+
+1. AWS Management **Console**.
+2. AWS Command-Line-Interface (**CLI**).
+3. AWS Software Development Kit (**SDK**).
+
+## Availability Zones (**AZs**) and Regions
+
+![Availability Zones and Regions](/Images/3-%20Core%20Services/regions-and-zones.png)
+
+
+Availability Zones (**AZs**) | Region |
+:---------|:----------|
+ **Independent data centers** | Made up of **Two (2)** or **More** Availability Zones (**AZs**) |
+
+## Features
+
+ Features | Description |
+:---------|:----------|
+ **High Availability** | Creates **Resiliency**, **High Availability**, and **redundancy** by **REPLICATING** resources across **AZs** and **Regions** |
