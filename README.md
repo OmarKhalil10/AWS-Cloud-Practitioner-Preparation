@@ -50,3 +50,31 @@
 [AWS Products](https://aws.amazon.com/products)
 
 ## 4- Billing and Pricing Domain
+
+- Compare and contast various **Pricing models** for AWS.
+- Recognize the various **account structures** in relation to AWS **Billing and Pricing**.
+- Identify **resources** available **for billing support.**
+
+### AWS Support Plans
+
+> There are **FIVE** different **support** plans available and **separate** from the **Monthly usage fees**.
+
+- The **FIVE** support plans available with monthly fees ranging from **FREE** to **over $15,000** per month.
+
+### Support plan types are
+
+1. **Basic**
+2. **Developer**
+3. **Business**
+4. **Enterprise On-Ramp**
+5. **Enterprise**
+
+### Charges and Saving Money
+
+- Different types of charges
+
+1. **Main Charges:**
+
+- Compute
+- Storage
+- Data out
