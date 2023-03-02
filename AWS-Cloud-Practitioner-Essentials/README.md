@@ -246,6 +246,332 @@ Match each description to an Amazon EC2 instance type.
 
 ## Amazon EC2 pricing
 
+With Amazon EC2, you pay only for the compute time that you use. Amazon EC2 offers a variety of pricing options for different use cases. For example, if your use case can withstand interruptions, you can save with Spot Instances. You can also save by committing early and locking in a minimum level of use with Reserved Instances.
+
+### 1- On-Demand
+
+On-Demand Instances are ideal for short-term, irregular workloads that cannot be interrupted. No upfront costs or minimum contracts apply. The instances run continuously until you stop them, and you pay for only the compute time you use.
+
+Sample use cases for On-Demand Instances include developing and testing applications and running applications that have unpredictable usage patterns. On-Demand Instances are not recommended for workloads that last a year or longer because these workloads can experience greater cost savings using Reserved Instances.
+
+### 2- Amazon EC2 Savings Plans
+
+AWS offers Savings Plans for several compute services, including Amazon EC2. Amazon EC2 Savings Plans enable you to reduce your compute costs by committing to a consistent amount of compute usage for a 1-year or 3-year term. This term commitment results in savings of up to 72% over On-Demand costs.
+
+Any usage up to the commitment is charged at the discounted Savings Plan rate (for example, $10 an hour). Any usage beyond the commitment is charged at regular On-Demand rates.
+
+### 3- Reserved Instances
+
+Reserved Instances are a billing discount applied to the use of On-Demand Instances in your account. You can purchase Standard Reserved and Convertible Reserved Instances for a 1-year or 3-year term, and Scheduled Reserved Instances for a 1-year term. You realize greater cost savings with the 3-year option.
+
+At the end of a Reserved Instance term, you can continue using the Amazon EC2 instance without interruption. However, you are charged On-Demand rates until you do one of the following:
+
+Terminate the instance.
+Purchase a new Reserved Instance that matches the instance attributes (instance type, Region, tenancy, and platform).
+
+### 4- Spot Instances
+
+Spot Instances are ideal for workloads with flexible start and end times, or that can withstand interruptions. Spot Instances use unused Amazon EC2 computing capacity and offer you cost savings at up to 90% off of On-Demand prices.
+
+Suppose that you have a background processing job that can start and stop as needed (such as the data processing job for a customer survey). You want to start and stop the processing job without affecting the overall operations of your business. If you make a Spot request and Amazon EC2 capacity is available, your Spot Instance launches. However, if you make a Spot request and Amazon EC2 capacity is unavailable, the request is not successful until capacity becomes available. The unavailable capacity might delay the launch of your background processing job.
+
+After you have launched a Spot Instance, if capacity is no longer available or demand for Spot Instances increases, your instance may be interrupted. This might not pose any issues for your background processing job. However, in the earlier example of developing and testing applications, you would most likely want to avoid unexpected interruptions. Therefore, choose a different EC2 instance type that is ideal for those tasks.
+
+### 5- Dedicated Hosts
+
+Dedicated Hosts are physical servers with Amazon EC2 instance capacity that is fully dedicated to your use.
+
+You can use your existing per-socket, per-core, or per-VM software licenses to help maintain license compliance. You can purchase On-Demand Dedicated Hosts and Dedicated Hosts Reservations. Of all the Amazon EC2 options that were covered, Dedicated Hosts are the most expensive.
+
+## Scaling Amazon EC2
+
+### Scalability
+
+Scalability involves beginning with only the resources you need and designing your architecture to automatically respond to changing demand by scaling out or in. As a result, you pay for only the resources you use. You don’t have to worry about a lack of computing capacity to meet your customers’ needs.
+
+If you wanted the scaling process to happen automatically, which AWS service would you use? The AWS service that provides this functionality for Amazon EC2 instances is **Amazon EC2 Auto Scaling**.
+
+### Amazon EC2 Auto Scaling
+
+If you’ve tried to access a website that wouldn’t load and frequently timed out, the website might have received more requests than it was able to handle. This situation is similar to waiting in a long line at a coffee shop, when there is only one barista present to take orders from customers.
+
+**Amazon EC2 Auto Scaling** enables you to **automatically add or remove Amazon EC2 instances** in response to changing application demand. By automatically scaling your instances **in and out** as needed, you are able to maintain a greater sense of application availability.
+
+Within Amazon EC2 Auto Scaling, you can use two approaches:
+
+1. dynamic scaling
+2. predictive scaling
+
+**Dynamic scaling**: responds to changing demand.
+
+**Predictive scaling**: automatically schedules the right number of Amazon EC2 instances based on predicted demand.
+
+> When you create an Auto Scaling group, you can set the minimum number of Amazon EC2 instances. **The minimum capacity** is the number of Amazon EC2 instances that launch immediately after you have created the Auto Scaling group. In this example, the **Auto Scaling group** has a minimum capacity of one Amazon EC2 instance.
+
+### NOTE
+> If you do not specify the desired number of Amazon EC2 instances in an Auto Scaling group, the desired capacity defaults to your minimum capacity.
+
+### maximum capacity
+
+Example, you might configure the Auto Scaling group to scale out in response to increased demand, but only to a maximum of four Amazon EC2 instances.
+
+## Directing traffic with Elastic Load Balancing
+
+**Elastic Load Balancing** is the AWS service that automatically distributes incoming application traffic across multiple resources, such as Amazon EC2 instances.
+
+A load balancer acts as a single point of contact for all incoming web traffic to your Auto Scaling group. This means that as you add or remove Amazon EC2 instances in response to the amount of incoming traffic, these requests route to the load balancer first. Then, the requests spread across multiple resources that will handle them. For example, if you have multiple Amazon EC2 instances, Elastic Load Balancing distributes the workload across the multiple instances so that no single instance has to carry the bulk of it.
+
+> Although Elastic Load Balancing and Amazon EC2 Auto Scaling are separate services, they work together to help ensure that applications running in Amazon EC2 can provide high performance and availability.
+
+## Messaging and queuing
+
+### Monolithic applications and microservices
+
+
+**monolithic application**:
+
+In this approach to application architecture, if a single component fails, other components fail, and possibly the entire application fails.
+
+> To help maintain application availability when a single component fails, you can design your application through a microservices approach.
+
+In a microservices approach, application components are **loosely coupled**. In this case, if a single component fails, the other components continue to work because they are communicating with each other. **The loose coupling prevents the entire application from failing**.
+
+When designing applications on AWS, you can take a microservices approach with services and components that fulfill different functions.
+
+**Two services facilitate application integration**:
+
+* Amazon Simple Notification Service (**Amazon SNS**)
+* Amazon Simple Queue Service (**Amazon SQS**)
+
+### 1- Amazon Simple Notification Service (Amazon SNS)
+
+It is a **publish/subscribe** service. Using Amazon SNS topics, a **publisher publishes messages to subscribers**.
+
+In Amazon SNS, subscribers can be:
+
+* web servers
+* email addresses
+* AWS Lambda functions
+* other options
+
+### 2- Amazon Simple Queue Service (Amazon SQS)
+
+Amazon Simple Queue Service (Amazon SQS) is a **message queuing service**.
+
+Using Amazon SQS, you can send, store, and receive messages between software components, without losing messages or requiring other services to be available. In Amazon SQS, an application sends messages into a queue. A **user or service retrieves a message from the queue, processes it, and then deletes it from the queue**.
+
+**How it deals with messages**:
+
+1. Retrieve
+2. Process
+3. Delete
+
+## Additional compute services
+
+### 1- Serverless computing [Focus on Code]
+
+As mentioned earlier If you have applications that you want to run in Amazon EC2, you
+must do the following:
+
+1. Provision instances (virtual servers)
+2. Upload your code
+3. Continue to manage the instances while your application is running
+
+The term **“serverless”** means that your code runs on servers, but **you do not need to provision or manage these servers**. With serverless computing, you can focus more on innovating new products and features instead of maintaining servers.
+
+> An AWS service for **serverless** computing is **AWS Lambda**.
+
+### AWS Lambda
+
+AWS Lambda is a service that **lets you run code without needing to provision or manage servers**.
+
+While using AWS Lambda, you **pay only for the compute time that you consume**. Charges apply only when your code is running. You can also run code for virtually any type of application or backend service, all with **zero administration**.
+
+> For example, a simple Lambda function might involve automatically resizing uploaded images to the AWS Cloud. In this case, the function triggers when uploading a new image.
+
+### How AWS Lambda works
+
+1. You upload your code to Lambda
+
+2. You set your code to trigger from an event source, such as AWS services, mobile applications, or HTTP endpoints
+
+3. Lambda runs your code only when triggered
+
+4. You pay only for the compute time that you use
+
+NOTE:
+
+> In AWS, you can also build and run containerized applications.
+
+### Containers
+
+Containers provide you with a standard way to **package your application's code and dependencies into a single object**
+
+You can also use containers for processes and workflows in which there are **essential requirements for security, reliability, and scalability**
+
+### Amazon Elastic Container Service (**Amazon ECS**)
+
+Amazon Elastic Container Service (Amazon ECS) is a highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS.
+
+Amazon ECS **supports Docker containers**.
+
+### Docker
+
+It is a software platform that **enables you to build, test, and deploy applications** quickly. AWS supports the use of the following:
+
+1. source Docker **Community** Edition
+2. **subscription-based** Docker Enterprise Edition
+
+> With Amazon ECS, you can use API calls to launch and stop Docker-enabled applications.
+
+### Amazon Elastic Kubernetes Service (**Amazon EKS**)
+
+Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed service that you can **use to run Kubernetes on AWS**.
+
+### Kubernetes
+
+It is open-source software that **enables you to deploy and manage containerized applications at scale**. A large community of volunteers maintains Kubernetes, and AWS actively works together with the Kubernetes community. As new features and functionalities release for Kubernetes applications, you can **easily apply these updates to your applications managed by Amazon EKS**.
+
+### AWS Fargate [Serverless Compute Engine]
+
+AWS Fargate is a **serverless compute engine for containers**
+
+It works with both **Amazon ECS and Amazon EKS**.
+
+When using AWS Fargate, you **do not need to provision or manage servers**. AWS Fargate manages your server infrastructure for you. You can focus more on innovating and developing your applications, and you pay only for the resources that are required to run your containers.
+
+## Summary
+
+In Module 2, you learned about the following concepts:
+
+* Amazon EC2 instance types and pricing options
+* Amazon EC2 Auto Scaling
+* Elastic Load Balancing
+* AWS services for messaging, containers, and serverless computing
+## Quiz
+
+1. You want to use an Amazon EC2 instance for a batch processing workload. What would be the best Amazon EC2 instance type to use?
+
+- [x] Compute optimized
+
+2. What are the contract length options for Amazon EC2 Reserved Instances? (Select TWO.)
+
+
+- [x] 1 year
+
+- [x] 3 years
+
+> Reserved Instances require a commitment of either 1 year or 3 years. The 3-year option offers a larger discount.
+
+
+3. ou have a workload that will run for a total of 6 months and can withstand interruptions. What would be the most cost-efficient Amazon EC2 purchasing option?
+
+- [x] Spot Instance
+
+4. Which process is an example of Elastic Load Balancing?
+
+- [x]
+Ensuring that no single Amazon EC2 instance has to carry the full workload on its own
+
+5. You want to deploy and manage containerized applications. Which service should you use?
+
+- [x] Amazon Elastic Kubernetes Service (Amazon EKS)
+# Module 3: Global infrastructure and reliability
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
