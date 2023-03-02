@@ -28,6 +28,17 @@
 
 ## 1- Cloud Concepts Domain
 
+- Secong largest domain in the exam (26%)
+- Define the AWS Cloud and it's value proposition
+- Identify aspects of AWS Cloud economics
+- List the different cloud architecture design priciples
+
+### What You'll Learn in This Clouse
+
+- Well-architected framework
+- Types of cloud computing
+- Types of cloud computing deployments
+- Advantages of cloud computing (over legacy IT infrastructure)
 ## 2- Security and Compliance Domain
 
 - Makes up **25%** of the exam.
