@@ -259,6 +259,3 @@ Basic | Developer | Business | Enterprise On-Ramp | Enterprise
 Links:
 - [AWS Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
 - [AWS TCO Tools](https://calculator.aws/)
-
-## 2- Netx steps
-
