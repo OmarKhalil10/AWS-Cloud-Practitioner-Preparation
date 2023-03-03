@@ -599,15 +599,224 @@ It is a service that enables you to run **infrastructure in a hybrid cloud** app
 
 - [x] Edge location
 
+5. Which action can you perform with **AWS Outposts**?
 
+- [x] Extend AWS infrastructure and services to your on-premises data center.
+# Module 4: Networking
 
+## Introduction
 
+### Learning objectives
 
+In this module, you will learn how to:
 
+* Describe the basic concepts of networking.
+* Describe the difference between public and private networking resources.
+* Explain a virtual private gateway using a real life scenario.
+* Explain a virtual private network (VPN) using a real life scenario.
+* Describe the benefit of AWS Direct Connect.
+* Describe the benefit of hybrid deployments.
+* Describe the layers of security used in an IT strategy.
+* Describe the services customers use to interact with the AWS global network.
 
+## Connectivity to AWS
 
+### Amazon Virtual Private Cloud (Amazon VPC)
 
+A networking service that you can use to establish boundaries around your AWS resources is Amazon Virtual Private Cloud **(Amazon VPC)**.
 
+Amazon VPC enables you to provision an isolated section of the AWS Cloud. In this isolated section, you can launch resources in a virtual network that you define. Within a virtual private cloud (VPC), you can organize your resources into subnets. **A subnet is a section of a VPC that can contain resources such as Amazon EC2 instances.**
+
+### Internet gateway
+
+To **allow public traffic from the internet to access your VPC**, you attach an internet **gateway** to the VPC.
+
+An internet gateway is a **connection between a VPC and the internet**. You can think of an internet gateway as being similar to a **doorway** that customers use to enter the coffee shop. **Without** an internet **gateway**, **no one can access the resources within your VPC**.
+
+### What if you have a VPC that includes only private resources?
+
+## Virtual private gateway
+
+To access private resources in a VPC, you can use a virtual private gateway.
+
+> Here’s an example of how a virtual private gateway works. You can think of the internet as the road between your home and the coffee shop. Suppose that you are traveling on this road with a bodyguard to protect you. You are still using the same road as other customers, but with an extra layer of protection.
+
+The **bodyguard** is like a virtual private network (**VPN**) connection that encrypts (or **protects**) your internet traffic from all the other requests around it.
+
+## AWS Direct Connect
+
+AWS Direct Connect is a service that enables you to **establish** a dedicated private connection **between your data center and a VPC**.
+
+> Suppose that there is an apartment building with a hallway directly linking the building to the coffee shop. Only the residents of the apartment building can travel through this hallway.
+>
+> This private hallway provides the same type of dedicated connection as AWS Direct Connect. Residents are able to get into the coffee shop without needing to use the public road shared with other customers.
+
+The private connection that AWS Direct Connect provides helps you to
+
+1. reduce network costs
+1. increase the amount of bandwidth that can travel through your network.
+
+## Subnets and network access control lists
+
+It is used to isolate resources and determine exactly how network traffic flows.
+
+## Subnets
+
+A subnet is a section of a VPC in which you can group resources based on security or operational needs. Subnets can be public or private.
+
+1. **Public subnets**
+
+contain resources that need to be accessible by the public, such as an online store’s website.
+
+2. **Private subnets**
+
+contain resources that should be accessible only through your private network, such as a database that contains customers’ personal information and order histories.
+
+## Network traffic in a VPC
+
+When a customer requests data from an application hosted in the AWS Cloud, this request is sent as a packet. A packet is a unit of data sent over the internet or a network.
+
+It enters into a VPC through an internet gateway. Before a packet can enter into a subnet or exit from a subnet, it checks for permissions. These permissions indicate who sent the packet and how the packet is trying to communicate with the resources in a subnet.
+
+The VPC component that checks packet permissions for subnets is a **network access control list (ACL)**.
+
+### Network access control lists (ACLs)
+
+A network access control list (ACL) is a **virtual firewall** that **controls** inbound and outbound **traffic** at the **subnet level**.
+
+> For example, step outside of the coffee shop and imagine that you are in an airport. In the airport, travelers are trying to enter into a different country. You can think of the travelers as packets and the passport control officer as a network ACL. The passport control officer checks travelers’ credentials when they are both entering and exiting out of the country. If a traveler is on an approved list, they are able to get through. However, if they are not on the approved list or are explicitly on a list of banned travelers, they cannot come in.
+
+### NOTE:
+
+- Each AWS account includes a default network ACL. When configuring your VPC, you can use your account’s default network ACL or create custom network ACLs.
+
+- By **default**, your account’s **default** network **ACL allows all inbound and outbound traffic**
+
+- For **custom** network **ACLs**, **all inbound and outbound traffic** is **denied** until you add rules to specify which traffic to allow
+
+- all network ACLs have an **explicit deny rule**. This rule **ensures** that **if a packet doesn’t match any of the other rules** on the list, the packet is **denied**.
+
+### Stateless packet filtering
+
+Network ACLs perform stateless packet filtering. They remember nothing and check packets that cross the subnet border each way: inbound and outbound.
+
+The **VPC component** that **checks packet permissions for** an Amazon **EC2** instance is a **security group**.
+
+### Security groups
+
+A security group is a **virtual firewall** that **controls inbound and outbound traffic** for an Amazon **EC2** instance.
+
+> By default, a security group **denies all inbound traffic and allows all outbound traffic**. You can add custom rules to configure which traffic to allow or deny.
+
+### Note
+the Security group (Virtual Firewall) does not check the list again when packets are exiting the EC2 instance
+
+### Stateful packet filtering
+
+> Security groups perform **stateful** packet filtering. They remember previous decisions made for incoming packets.
+
+**Example**:
+
+When a packet response for that request returns to the instance, the security group remembers your previous request. The security group allows the response to proceed, regardless of inbound security group rules.
+
+> Both network ACLs and security groups enable you to configure custom rules for the traffic in your VPC. As you continue to learn more about AWS security and networking, make sure to understand the differences between network ACLs and security groups.
+
+### Quiz
+
+![Networking Quiz](/Images/AWS-Cloud-Practitioner-Essentials/Networking%20Quiz.png)
+
+1. Which statement best describes an AWS account’s default network access control list?
+
+## Global networking
+
+Domain Name System (DNS)
+
+You can think of DNS as being the phone book of the internet. DNS resolution is the process of **translating a domain name to an IP address**.
+
+For example, suppose that you want to visit AnyCompany’s website.
+
+1. When you enter the domain name into your browser, this request is sent to a customer DNS resolver
+
+1. The customer DNS resolver asks the company DNS server for the IP address that corresponds to AnyCompany’s website
+
+2. The company DNS server responds by providing the IP address for AnyCompany’s website, 192.0.2.0
+
+### Amazon Route 53
+
+- **Amazon Route 53** is a **DNS web service**. It gives developers and businesses a reliable way to route end users to internet applications hosted in AWS.
+
+- Another feature of Route 53 is the ability to **manage the DNS records for domain names**. You can register new domain names directly in Route 53. You can also **transfer DNS records for existing domain names** managed by other **domain registrars**. This enables you to **manage all of your domain names within a single location**.
+
+> In the previous module, you learned about Amazon CloudFront, a content delivery service. The following example describes how Route 53 and Amazon CloudFront work together to deliver content to customers.
+
+**Example**:
+
+How Amazon Route 53 and Amazon CloudFront deliver content
+
+Suppose that AnyCompany’s application is running on several Amazon EC2 instances. These instances are in an Auto Scaling group that attaches to an Application Load Balancer.
+
+1. A customer requests data from the application by going to AnyCompany’s website.
+
+2. Amazon Route 53 uses DNS resolution to identify AnyCompany.com’s corresponding IP address, 192.0.2.0. This information is sent back to the customer.
+
+3. The customer’s request is sent to the nearest edge location through Amazon CloudFront.
+
+1. Amazon CloudFront connects to the Application Load Balancer, which sends the incoming packet to an Amazon EC2 instance.
+
+### Quiz
+
+1. Which statement best describes DNS resolution?
+
+- [x] Translating a domain name to an IP address
+
+## Summary
+
+In Module 4, you learned about the following concepts:
+
+> Structuring and connecting to a VPC
+> Securing VPC resources with network access control lists and security groups
+> Using Amazon Route 53 and Amazon CloudFront to deliver content
+
+## Module 4: Quiz
+
+1. Your company has an application that uses Amazon EC2 instances to run the customer-facing website and Amazon RDS database instances to store customers’ personal information. How should the developer configure the VPC according to best practices?
+
+- [x]
+Place the Amazon EC2 instances in a public subnet and the Amazon RDS database instances in a private subnet.
+
+2. Which component can be used to establish a private dedicated connection between your company’s data center and AWS?
+
+- [x] AWS Direct Connect
+
+3. Which statement best describes security groups?
+
+- [x] They are stateful and deny all inbound traffic by default.
+
+4. Which component is used to connect a VPC to the internet?
+
+- [x] Internet gateway
+
+5. Which service is used to manage the DNS records for domain names?
+
+- [x] Amazon Route 53
+
+# Module 5: Storage and databases
+
+## introduction
+### Learning objectives
+
+In this module, you will learn how to:
+
+* Summarize the basic concept of storage and databases.
+* Describe the benefits of Amazon Elastic Block Store (Amazon EBS).
+* Describe the benefits of Amazon Simple Storage Service (Amazon S3).
+* Describe the benefits of Amazon Elastic File System (Amazon EFS).
+* Summarize various storage solutions.
+* Describe the benefits of Amazon Relational Database Service (Amazon RDS).
+* Describe the benefits of Amazon DynamoDB.
+* Summarize various database services.
+
+## Instance stores and Amazon Elastic Block Store (Amazon EBS)
 
 
 
