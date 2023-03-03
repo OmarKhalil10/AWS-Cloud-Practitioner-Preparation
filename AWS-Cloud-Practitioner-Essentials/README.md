@@ -1127,6 +1127,260 @@ EBS volumes store data within a single Availability Zone. Amazon EFS file system
 
 ### Learning objectives
 
+In this module, you will learn how to:
+
+* Explain the benefits of the shared responsibility model.
+* Describe multi-factor authentication (MFA).
+* Differentiate between the AWS Identity and Access Management (IAM) security levels.
+* Explain the main benefits of AWS Organizations.
+* Describe security policies at a basic level.
+* Summarize the benefits of compliance with AWS.
+* Explain additional AWS security services at a basic level.
+
+## Shared responsibility model
+
+The answer is both. The reason is that you do not treat your AWS environment as a single object. Rather, you treat the environment as a collection of parts that build upon each other. AWS is responsible for some parts of your environment and you (the customer) are responsible for other parts. This concept is known as the shared responsibility model.
+
+> The shared responsibility model divides into customer responsibilities (commonly referred to as “security in the cloud”) and AWS responsibilities (commonly referred to as “security of the cloud”).
+
+![shared responsibility model](/Images/AWS-Cloud-Practitioner-Essentials/Shared-responsibility-model.png)
+
+
+> You can think of this model as being similar to the division of **responsibilities between a homeowner and a homebuilder**. The builder (AWS) is responsible for constructing your house and ensuring that it is solidly built. As the homeowner (the customer), it is your responsibility to secure everything in the house by ensuring that the doors are closed and locked.
+
+
+### 1- Customers: Security in the cloud
+
+Customers are responsible for the security of everything that they create and put in the AWS Cloud.
+
+When using AWS services, you, the customer, maintain complete control over your content. You are responsible for managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content. You also control how access rights are granted, managed, and revoked.
+
+The security steps that you take will depend on factors such as the services that you use, the complexity of your systems, and your company’s specific operational and security needs. Steps include selecting, configuring, and patching the operating systems that will run on Amazon EC2 instances, configuring security groups, and managing user accounts.
+
+### 2- AWS: Security of the cloud
+
+AWS is responsible for security of the cloud.
+
+AWS operates, manages, and controls the components at all layers of infrastructure. This includes areas such as the host operating system, the virtualization layer, and even the physical security of the data centers from which services operate.
+
+AWS is responsible for protecting the global infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure includes:
+
+* AWS Regions
+* Availability Zones
+* Edge locations
+
+AWS manages the security of the cloud, specifically the physical infrastructure that hosts your resources, which include:
+
+* Physical security of data centers
+* Hardware and software infrastructure
+* Network infrastructure
+* Virtualization infrastructure
+
+Although you cannot visit AWS data centers to see this protection firsthand, AWS provides several reports from third-party auditors. These auditors have verified its compliance with a variety of computer security standards and regulations.
+
+
+### Quiz
+
+1. Which tasks are the responsibilities of customers? (Select TWO.)
+
+- [x] Patching software on Amazon EC2 instances
+
+- [x] Setting permissions for Amazon S3 objects
+
+## User permissions and access
+
+### AWS Identity and Access Management (IAM)
+
+AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely.
+
+IAM gives you the flexibility to configure access based on your company’s specific operational and security needs. You do this by using a combination of IAM features, which are explored in detail in this lesson:
+
+* IAM users, groups, and roles
+* IAM policies
+* Multi-factor authentication (**MFA**)
+
+### AWS account root user
+
+When you first create an AWS account, you begin with an identity known as the **root user**.
+
+The root user is accessed by signing in with the email address and password that you used to create your AWS account. You can think of the root user as being similar to the owner of the coffee shop. **It has complete access to all the AWS services and resources in the account**.
+
+![AWS account root user](/Images/AWS-Cloud-Practitioner-Essentials/AWS-Root-User.png)
+
+### Best practice:
+
+Do not use the root user for everyday tasks.
+
+Instead, use the root user to create your first IAM user and assign it permissions to create other users.
+
+Then, continue to create other IAM users, and access those identities for performing regular tasks throughout AWS. Only use the root user when you need to perform a limited number of tasks that are only available to the root user. Examples of these tasks include:
+
+* changing your root user email address
+* changing your AWS support plan
+
+### IAM users
+
+An IAM user is an identity that you create in AWS. It represents the person or application that interacts with AWS services and resources. It consists of a name and credentials.
+
+By default, when you create a new IAM user in AWS, it has no permissions associated with it. To allow the IAM user to perform specific actions in AWS, such as launching an Amazon EC2 instance or creating an Amazon S3 bucket, you **must grant the IAM user the necessary permissions**.
+
+### Best practice:
+
+We recommend that you create individual IAM users for each person who needs to access AWS.
+
+Even if you have multiple employees who require the same level of access, you should create individual IAM users for each of them. This provides additional security by allowing each IAM user to have a **unique set of security credentials**.
+
+### IAM policies
+
+An IAM policy is a document that allows or denies permissions to AWS services and resources.
+
+### Best practice:
+
+Follow the security principle of least privilege when granting permissions.
+
+By following this principle, you help to prevent users or roles from having more permissions than needed to perform their tasks.
+
+For example, if an employee needs access to only a specific bucket, specify the bucket in the IAM policy. Do this instead of granting the employee access to all of the buckets in your AWS account.
+
+![IAM Policy](/images/AWS-Cloud-Practitioner-Essentials/IAM-Policy.png)
+
+> Now, suppose that the coffee shop has hired a few more cashiers. Instead of assigning permissions to each individual IAM user, the owner places the users into an IAM group.
+
+### IAM groups
+
+An IAM group is a collection of IAM users. When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
+
+![IAM groups](/images/AWS-Cloud-Practitioner-Essentials/IAM-Group.png)
+
+### IAM roles [Gain temporary access to permissions depending on your role in the organization]
+
+An IAM role is an identity that you can assume to gain temporary access to permissions.
+
+Before an IAM user, application, or service can assume an IAM role, they must be granted permissions to switch to the role. When someone assumes an IAM role, they abandon all previous permissions that they had under a previous role and assume the permissions of the new role.
+
+### Best practice:
+
+IAM roles are ideal for situations in which access to services or resources needs to be **granted temporarily, instead of long-term**.
+
+### Multi-factor authentication (**MFA**)
+
+Have you ever signed in to a website that required you to provide multiple pieces of information to verify your identity? You might have needed to provide your password and then a second form of authentication, such as a random code sent to your phone. This is an example of multi-factor authentication.
+
+> In IAM, multi-factor authentication (MFA) provides an extra layer of security for your AWS account.
+
+### How multi-factor authentication works
+
+![MFA-Step-1](/Images/AWS-Cloud-Practitioner-Essentials/MFA-1.png)
+
+![MFA-Step-2](/Images/AWS-Cloud-Practitioner-Essentials/MFA-2.png)
+
+## AWS Organizations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
