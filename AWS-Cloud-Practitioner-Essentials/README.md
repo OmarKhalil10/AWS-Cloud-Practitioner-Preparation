@@ -1121,6 +1121,7 @@ EBS volumes store data within a single Availability Zone. Amazon EFS file system
 
 - [x] Amazon Redshift
 
+
 # Module 6: Security
 
 ## Module 6 introduction
