@@ -1096,13 +1096,36 @@ In Module 5, you learned about the following concepts:
 * AWS DMS (Database Migration Service)
 * Additional database services and accelerators
 
+### Quiz
 
+1. Which Amazon S3 storage classes are optimized for archival data? (Select TWO.)
 
+- [x] Amazon S3 Glacier Flexible Retrieval
 
+- [x] Amazon S3 Glacier Deep Archive
 
+2. Which statement or statements are TRUE about Amazon EBS volumes and Amazon EFS file systems?
 
+- [x]
+EBS volumes store data within a single Availability Zone. Amazon EFS file systems store data across multiple Availability Zones.
 
+3. You want to store data in an object storage service. Which AWS service is best for this type of storage?
 
+- [x] Amazon Simple Storage Service (Amazon S3)
+
+4. Which statement best describes Amazon DynamoDB?
+
+- [x] A serverless key-value database service
+
+5. Which service is used to query and analyze data across a data warehouse?
+
+- [x] Amazon Redshift
+
+# Module 6: Security
+
+## Module 6 introduction
+
+### Learning objectives
 
 
 
